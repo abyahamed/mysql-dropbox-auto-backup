@@ -1,6 +1,6 @@
 # mysql-dropbox-auto-backup
 
-Dump MySQL databases, compress them, and upload to [Dropbox]. Backups are kept for 7 days.
+Dump MySQL databases, compress them and upload to [Dropbox]. Backups are kept for 7 days.
 
 ## Overview
 
