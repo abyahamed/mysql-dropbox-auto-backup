@@ -11,13 +11,11 @@
 # This Script Path (without forward slash at end) ex: /home/airportparkings/mysql-dropbox-auto-backup
 # If using all from root folder set path to ./mysql-dropbox-auto-backup
 # path=/home/airportparkings/mysql-dropbox-auto-backup
-path=./mysql-dropbox-auto-backup
+# path=./mysql-dropbox-auto-backup
+path=$PWD
 
 # MySQL config file
 config=$path/mysql-dropbox-backup.cnf
-
-# Backup file encryption password
-#encryption_pass=aps64829@
 
 # List of databases to ignore (space separated)
 db_ignore=(Database information_schema mysql performance_schema)
@@ -65,9 +63,7 @@ if [[ "$backup_mysql_user_table" == true ]]; then
     mysqldump --defaults-extra-file=$config mysql user > $sqlfile
 fi
 
-# Tar, compress, and encrypt the dumped SQL files
-# echo "Compressing and encrypting dumped SQL files..."
-#tar cz $current_date | openssl enc -aes-256-cbc -e -k $encryption_pass > $current_date.tar.gz.enc
+# Tar, compress the dumped SQL files
 echo "Compressing dumped SQL files..."
 tar cz $current_date > $current_date.tar.gz
 
@@ -81,7 +77,6 @@ $path/dropbox_uploader.sh upload $current_date.tar.gz $current_date.tar.gz
 
 # Delete the old backup
 echo "Deleting old Dropbox backup..."
-# ./dropbox_uploader.sh delete $old_date.tar.gz.enc
 $path/dropbox_uploader.sh delete $old_date.tar.gz
 
 # Delete the local copy of the backup tarball that we just created
