@@ -88,6 +88,7 @@ In the next line add
 Additional commands to trace cronjob
 
 tailf /var/log/cron
+
 cat /var/log/cron
 
    [Dropbox]: <https://www.dropbox.com>
