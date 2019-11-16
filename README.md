@@ -83,6 +83,13 @@ In the next line add
 0 11,15,19,23 * * * /home/you_user/mysql-dropbox-auto-backup/mysql-dropbox-backup.sh&>/home/you_user/mysql-dropbox-auto-backup/output.log
 ```
 
+## Tracing Cronjob:
+
+Additional commands to trace cronjob
+
+tailf /var/log/cron
+cat /var/log/cron
+
    [Dropbox]: <https://www.dropbox.com>
    [Dropbox-Uploader]: <https://github.com/andreafabrizi/Dropbox-Uploader>
    [Andrea Fabrizi]: <https://github.com/andreafabrizi>
