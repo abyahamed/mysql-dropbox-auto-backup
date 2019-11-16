@@ -1,4 +1,4 @@
-# mysql-dropbox-auto-backup
+# mysql-dropbox-auto-backup is a shell script to dump MySQL databases and upload to dropbox.
 
 Dump MySQL databases, compress them, and upload to [Dropbox]. Backups are kept for 7 days.
 
