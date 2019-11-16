@@ -18,7 +18,7 @@ path=$PWD
 config=$path/mysql-dropbox-backup.cnf
 
 # List of databases to ignore (space separated)
-db_ignore=(Database information_schema mysql performance_schema)
+db_ignore=(Database database sys information_schema mysql performance_schema)
 
 # Should we backup the MySQL "user" table?
 backup_mysql_user_table=false

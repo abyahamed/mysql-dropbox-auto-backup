@@ -23,7 +23,7 @@ Place your script directly in home directory.
 
 ## Configuration
 
-Edit `mysql-dropbox-backup.cf` to add your MySQL connection details.
+Edit `mysql-dropbox-backup.cnf` to add your MySQL connection details.
 
 Edit the top section of `mysql-dropbox-backup.sh` if you wish to change MySQL config file location. By default it is set to the current directoy. edit the list of ignored databases if you wish. You can also choose whether to dump the MySQL `user` table or not.
 
