@@ -4,7 +4,7 @@ Dump MySQL databases, compress them and upload to [Dropbox]. Backups are kept fo
 
 ## Overview
 
-`mysql-dropbox-aut-backup` is a simple shell script that will use `mysqldump` to dump all of your MySQL databases, omitting any that you specify, add them to a compressed tarball, and upload them to [Dropbox]. By defauly it will also dump the MySQL `user` table unless you tell the script not to in mysql-drop-backup.sh. The script makes use of the [Dropbox-Uploader] project by [Andrea Fabrizi] and [mysql-dropbox-backup] project by [Barnaby Knowles] Run it as a daily cron job to keep 7 days of backups. On each run it will try to delete the backup taken 7 days ago.
+`mysql-dropbox-aut-backup` is a simple shell script that will use `mysqldump` to dump all of your MySQL databases, omitting any that you specify, add them to a compressed tarball, and upload them to [Dropbox]. By defauly it will also dump the MySQL `user` table unless you tell the script not to in `mysql-drop-backup.sh`. The script makes use of the [Dropbox-Uploader] project by [Andrea Fabrizi] and [mysql-dropbox-backup] project by [Barnaby Knowles] Run it as a daily cron job to keep 7 days of backups. On each run it will try to delete the backup taken 7 days ago.
 
 ## Requirements
 
@@ -16,6 +16,7 @@ Most Linux systems will come with cURL and OpenSSL installed. [Dropbox] gives aw
 ## Installation
 
 First, clone the repository using git (recommended):
+  
   git clone https://github.com/wcaaan/mysql-dropbox-auto-backup.git
 
 Place your script directly in home directory.
@@ -24,9 +25,9 @@ Place your script directly in home directory.
 
 Edit `mysql-dropbox-backup.cf` to add your MySQL connection details.
 
-Edit the top section of `mysql-dropbox-backup.sh` to give it your MySQL config file location. edit the list of ignored databases if you wish. You can also choose whether to dump the MySQL `user` table or not.
+Edit the top section of `mysql-dropbox-backup.sh` if you wish to change MySQL config file location. By default it is set to the current directoy. edit the list of ignored databases if you wish. You can also choose whether to dump the MySQL `user` table or not.
 
-Edit the path if necessary.
+Edit the path if necessary, by default it is set to the current directory.
 
 ## Usage
 
