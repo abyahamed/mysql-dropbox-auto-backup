@@ -71,9 +71,11 @@ crontab -e
 
 Add the following command at the end of page and set your crontab execution time as you wish.
 
-If SHELL="/bin/bash" is not defined at the top of file
+If SHELL="/bin/bash" is not defined at the top of file Add 
 
-Add SHELL="/bin/bash"
+```
+SHELL="/bin/bash"
+```
 
 In the next line add
 
