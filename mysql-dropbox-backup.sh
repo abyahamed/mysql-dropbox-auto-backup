@@ -10,9 +10,9 @@
 
 # This Script Path (without forward slash at end) ex: /home/airportparkings/mysql-dropbox-auto-backup
 # If using all from root folder set path to ./mysql-dropbox-auto-backup
-# path=/home/airportparkings/mysql-dropbox-auto-backup
+path=/home/airportparkings/mysql-dropbox-auto-backup
 # path=./mysql-dropbox-auto-backup
-path=$PWD
+# path=$PWD
 
 # MySQL config file
 config=$path/mysql-dropbox-backup.cnf
