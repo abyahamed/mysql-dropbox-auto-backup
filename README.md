@@ -34,14 +34,17 @@ Edit the path if necessary, by default it is set to the current directory.
 The first thing you should do is give the execution permission to the `dropbox_uploader.sh` script and run it:
 
 ```bash
- $chmod +x dropbox_uploader.sh
- $./dropbox_uploader.sh
+ $ chmod +x dropbox_uploader.sh
+ $ ./dropbox_uploader.sh
 ```
 
-The first time you run `dropbox_uploader.sh`, you'll be guided through a wizard in order to configure access to your Dropbox. This configuration will be stored in `~/.dropbox_uploader`. Once the dropbox is configured simply run 
+The first time you run `dropbox_uploader.sh`, you'll be guided through a wizard in order to configure access to your Dropbox. This configuration will be stored in `~/.dropbox_uploader`. 
 
-```
-./mysql-dropbox-backup.sh
+Once the dropbox is configured give the execution permission to `mysql-dropbox-backup.sh` and simply run it:
+
+```bash
+$ chmod +x mysql-dropbox-backup.sh
+$ ./mysql-dropbox-backup.sh
 ```
 
 
