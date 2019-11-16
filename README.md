@@ -68,7 +68,15 @@ Note: In below mentioned cronjob command you will see the output is logged into 
 ```
 crontab -e 
 ```
+
 Add the following command at the end of page and set your crontab execution time as you wish.
+
+If SHELL="/bin/bash" is not defined at the top of file
+
+Add SHELL="/bin/bash"
+
+In the next line add
+
 ```
 0 11,15,19,23 * * * /home/you_user/mysql-dropbox-auto-backup/mysql-dropbox-backup.sh&>/home/you_user/mysql-dropbox-auto-backup/output.log
 ```
